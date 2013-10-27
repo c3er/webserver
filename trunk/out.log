@@ -1,0 +1,307 @@
+running build
+running build_exe
+copying C:\Python33\lib\site-packages\cx_Freeze\bases\Win32GUI.exe -> build\exe.win32-3.3\webserver.exe
+copying C:\Windows\system32\python33.dll -> build\exe.win32-3.3\python33.dll
+Stamped: build\exe.win32-3.3\webserver.exe
+writing zip file build\exe.win32-3.3\library.zip
+
+  Name                      File
+  ----                      ----
+m BUILD_CONSTANTS           
+m _bisect                   
+m _bz2                      C:\Python33\DLLs\_bz2.pyd
+m _codecs                   
+m _codecs_cn                
+m _codecs_hk                
+m _codecs_iso2022           
+m _codecs_jp                
+m _codecs_kr                
+m _codecs_tw                
+m _collections              
+m _datetime                 
+m _dummy_thread             
+m _functools                
+m _hashlib                  C:\Python33\DLLs\_hashlib.pyd
+m _heapq                    
+m _imp                      
+m _io                       
+m _locale                   
+m _lzma                     C:\Python33\DLLs\_lzma.pyd
+m _md5                      
+m _multibytecodec           
+m _osx_support              C:\Python33\lib\_osx_support.py
+m _random                   
+m _sha1                     
+m _sha256                   
+m _sha512                   
+m _socket                   C:\Python33\DLLs\_socket.pyd
+m _sre                      
+m _ssl                      C:\Python33\DLLs\_ssl.pyd
+m _string                   
+m _strptime                 
+m _struct                   
+m _thread                   
+m _threading_local          
+m _warnings                 
+m _weakref                  
+m _weakrefset               
+m _winapi                   
+m abc                       
+m argparse                  
+m array                     
+m atexit                    
+m base64                    
+m binascii                  
+m bisect                    
+m builtins                  
+m bz2                       
+m calendar                  
+m codecs                    
+P collections               
+m collections.abc           
+m contextlib                
+m copy                      
+m copyreg                   
+m cx_Freeze__init__         C:\Python33\lib\site-packages\cx_Freeze\initscripts\Console3.py
+m datetime                  
+P distutils                 C:\Python33\lib\distutils\__init__.py
+m distutils.errors          C:\Python33\lib\distutils\errors.py
+m distutils.log             C:\Python33\lib\distutils\log.py
+m distutils.spawn           C:\Python33\lib\distutils\spawn.py
+m distutils.sysconfig       C:\Python33\lib\distutils\sysconfig.py
+m distutils.text_file       C:\Python33\lib\distutils\text_file.py
+m dummy_threading           
+P email                     C:\Python33\lib\email\__init__.py
+m email._encoded_words      C:\Python33\lib\email\_encoded_words.py
+m email._parseaddr          C:\Python33\lib\email\_parseaddr.py
+m email._policybase         C:\Python33\lib\email\_policybase.py
+m email.base64mime          C:\Python33\lib\email\base64mime.py
+m email.charset             C:\Python33\lib\email\charset.py
+m email.encoders            C:\Python33\lib\email\encoders.py
+m email.errors              C:\Python33\lib\email\errors.py
+m email.feedparser          C:\Python33\lib\email\feedparser.py
+m email.generator           C:\Python33\lib\email\generator.py
+m email.header              C:\Python33\lib\email\header.py
+m email.iterators           C:\Python33\lib\email\iterators.py
+m email.message             C:\Python33\lib\email\message.py
+m email.parser              C:\Python33\lib\email\parser.py
+m email.quoprimime          C:\Python33\lib\email\quoprimime.py
+m email.utils               C:\Python33\lib\email\utils.py
+P encodings                 
+m encodings.aliases         
+m encodings.ascii           
+m encodings.base64_codec    
+m encodings.big5            
+m encodings.big5hkscs       
+m encodings.bz2_codec       
+m encodings.charmap         
+m encodings.cp037           
+m encodings.cp1006          
+m encodings.cp1026          
+m encodings.cp1140          
+m encodings.cp1250          
+m encodings.cp1251          
+m encodings.cp1252          
+m encodings.cp1253          
+m encodings.cp1254          
+m encodings.cp1255          
+m encodings.cp1256          
+m encodings.cp1257          
+m encodings.cp1258          
+m encodings.cp424           
+m encodings.cp437           
+m encodings.cp500           
+m encodings.cp65001         
+m encodings.cp720           
+m encodings.cp737           
+m encodings.cp775           
+m encodings.cp850           
+m encodings.cp852           
+m encodings.cp855           
+m encodings.cp856           
+m encodings.cp857           
+m encodings.cp858           
+m encodings.cp860           
+m encodings.cp861           
+m encodings.cp862           
+m encodings.cp863           
+m encodings.cp864           
+m encodings.cp865           
+m encodings.cp866           
+m encodings.cp869           
+m encodings.cp874           
+m encodings.cp875           
+m encodings.cp932           
+m encodings.cp949           
+m encodings.cp950           
+m encodings.euc_jis_2004    
+m encodings.euc_jisx0213    
+m encodings.euc_jp          
+m encodings.euc_kr          
+m encodings.gb18030         
+m encodings.gb2312          
+m encodings.gbk             
+m encodings.hex_codec       
+m encodings.hp_roman8       
+m encodings.hz              
+m encodings.idna            
+m encodings.iso2022_jp      
+m encodings.iso2022_jp_1    
+m encodings.iso2022_jp_2    
+m encodings.iso2022_jp_2004 
+m encodings.iso2022_jp_3    
+m encodings.iso2022_jp_ext  
+m encodings.iso2022_kr      
+m encodings.iso8859_1       
+m encodings.iso8859_10      
+m encodings.iso8859_11      
+m encodings.iso8859_13      
+m encodings.iso8859_14      
+m encodings.iso8859_15      
+m encodings.iso8859_16      
+m encodings.iso8859_2       
+m encodings.iso8859_3       
+m encodings.iso8859_4       
+m encodings.iso8859_5       
+m encodings.iso8859_6       
+m encodings.iso8859_7       
+m encodings.iso8859_8       
+m encodings.iso8859_9       
+m encodings.johab           
+m encodings.koi8_r          
+m encodings.koi8_u          
+m encodings.latin_1         
+m encodings.mac_arabic      
+m encodings.mac_centeuro    
+m encodings.mac_croatian    
+m encodings.mac_cyrillic    
+m encodings.mac_farsi       
+m encodings.mac_greek       
+m encodings.mac_iceland     
+m encodings.mac_latin2      
+m encodings.mac_roman       
+m encodings.mac_romanian    
+m encodings.mac_turkish     
+m encodings.mbcs            
+m encodings.palmos          
+m encodings.ptcp154         
+m encodings.punycode        
+m encodings.quopri_codec    
+m encodings.raw_unicode_escape 
+m encodings.rot_13          
+m encodings.shift_jis       
+m encodings.shift_jis_2004  
+m encodings.shift_jisx0213  
+m encodings.tis_620         
+m encodings.undefined       
+m encodings.unicode_escape  
+m encodings.unicode_internal 
+m encodings.utf_16          
+m encodings.utf_16_be       
+m encodings.utf_16_le       
+m encodings.utf_32          
+m encodings.utf_32_be       
+m encodings.utf_32_le       
+m encodings.utf_7           
+m encodings.utf_8           
+m encodings.utf_8_sig       
+m encodings.uu_codec        
+m encodings.zlib_codec      
+m errno                     
+m fnmatch                   C:\Python33\lib\fnmatch.py
+m functools                 
+m gc                        
+m genericpath               
+m getopt                    C:\Python33\lib\getopt.py
+m gettext                   
+m gzip                      C:\Python33\lib\gzip.py
+m hashlib                   C:\Python33\lib\hashlib.py
+m heapq                     
+P html                      C:\Python33\lib\html\__init__.py
+P http                      C:\Python33\lib\http\__init__.py
+m http.client               C:\Python33\lib\http\client.py
+m http.server               C:\Python33\lib\http\server.py
+m imp                       
+P importlib                 
+m importlib._bootstrap      
+m importlib.machinery       
+m io                        
+m itertools                 
+m keyword                   
+m linecache                 
+m locale                    
+P logging                   C:\Python33\lib\logging\__init__.py
+m lzma                      C:\Python33\lib\lzma.py
+m marshal                   
+m math                      
+m mimetypes                 C:\Python33\lib\mimetypes.py
+m msvcrt                    
+m nt                        
+m ntpath                    
+m operator                  
+m optparse                  
+m os                        
+m posixpath                 
+m py_compile                C:\Python33\lib\py_compile.py
+m quopri                    
+m random                    C:\Python33\lib\random.py
+m re                        
+m reprlib                   
+m select                    C:\Python33\DLLs\select.pyd
+m shutil                    C:\Python33\lib\shutil.py
+m signal                    
+m socket                    C:\Python33\lib\socket.py
+m socketserver              C:\Python33\lib\socketserver.py
+m sre_compile               
+m sre_constants             
+m sre_parse                 
+m ssl                       C:\Python33\lib\ssl.py
+m stat                      
+m string                    
+m stringprep                
+m struct                    
+m subprocess                C:\Python33\lib\subprocess.py
+m sys                       
+m tarfile                   C:\Python33\lib\tarfile.py
+m tempfile                  C:\Python33\lib\tempfile.py
+m textwrap                  
+m threading                 
+m time                      
+m token                     
+m tokenize                  
+m traceback                 
+m types                     
+m unicodedata               C:\Python33\DLLs\unicodedata.pyd
+P urllib                    C:\Python33\lib\urllib\__init__.py
+m urllib.parse              C:\Python33\lib\urllib\parse.py
+m uu                        C:\Python33\lib\uu.py
+m warnings                  
+m weakref                   
+m webserver__main__         webserver.py
+m winreg                    
+m zipfile                   C:\Python33\lib\zipfile.py
+m zipimport                 
+m zlib                      
+
+Missing modules:
+? _dummy_threading imported from dummy_threading
+? _emx_link imported from os
+? _posixsubprocess imported from subprocess
+? ce imported from os
+? doctest imported from heapq
+? grp imported from shutil, tarfile
+? org.python.core imported from copy
+? os.path imported from os, shutil
+? os2 imported from os
+? os2emxpath imported from os
+? posix imported from os
+? pwd imported from http.server, posixpath, shutil, tarfile
+This is not necessarily a problem - the modules may not be needed on this platform.
+
+copying C:\Python33\DLLs\_bz2.pyd -> build\exe.win32-3.3\_bz2.pyd
+copying C:\Python33\DLLs\_hashlib.pyd -> build\exe.win32-3.3\_hashlib.pyd
+copying C:\Python33\DLLs\_lzma.pyd -> build\exe.win32-3.3\_lzma.pyd
+copying C:\Python33\DLLs\_socket.pyd -> build\exe.win32-3.3\_socket.pyd
+copying C:\Python33\DLLs\_ssl.pyd -> build\exe.win32-3.3\_ssl.pyd
+copying C:\Python33\DLLs\select.pyd -> build\exe.win32-3.3\select.pyd
+copying C:\Python33\DLLs\unicodedata.pyd -> build\exe.win32-3.3\unicodedata.pyd
