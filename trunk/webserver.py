@@ -10,6 +10,9 @@ DEFAULT_PORT = 3030
 
 # HTTP related #################################################################
 class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
+    '''A cludge to accomplish an easy way to serve another directory than the
+    current.
+    '''
     root_path = ''
     
     def __init__(self, *args, **kw):
@@ -66,25 +69,33 @@ def main():
     if get_option_count(options) == 0:
         parser.print_help()
     
+    # Evaluate given options ###################################################
     if options.port:
         try:
             port = int(options.port)
         except ValueError as exc:
+            port = options.port
             parser.error('Could not identify "{}" as port.'.format(port))
     else:
         port = DEFAULT_PORT
             
     if options.root_path:
         root_path = options.root_path
+        if not os.path.isdir(root_path):
+            parser.error('Given path "{}" does not lead to a directory.'.format(
+                root_path
+            ))
         if len(root_path) > 0 and not root_path.endswith('/'):
             root_path += '/'
     else:
         root_path = ''
+    ############################################################################
     
     httpd = HTTPServerWorker(port, root_path)
     
     print(
         'Serving at port {} with root path "{}"'.format(port, root_path),
+        'http://localhost:{}/'.format(port),
         'Press Enter to exit.',
         sep = '\n'
     )
