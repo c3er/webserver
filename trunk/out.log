@@ -1,14 +1,14 @@
 running build
 running build_exe
-copying C:\Python33\lib\site-packages\cx_Freeze\bases\Win32GUI.exe -> build\exe.win32-3.3\webserver.exe
+copying C:\Python33\lib\site-packages\cx_Freeze\bases\Console.exe -> build\exe.win32-3.3\webserver.exe
 copying C:\Windows\system32\python33.dll -> build\exe.win32-3.3\python33.dll
-Stamped: build\exe.win32-3.3\webserver.exe
+*** WARNING *** unable to create version resource
+install pywin32 extensions first
 writing zip file build\exe.win32-3.3\library.zip
 
   Name                      File
   ----                      ----
 m BUILD_CONSTANTS           
-m _bisect                   
 m _bz2                      C:\Python33\DLLs\_bz2.pyd
 m _codecs                   
 m _codecs_cn                
@@ -52,7 +52,6 @@ m array
 m atexit                    
 m base64                    
 m binascii                  
-m bisect                    
 m builtins                  
 m bz2                       
 m calendar                  
@@ -62,7 +61,7 @@ m collections.abc
 m contextlib                
 m copy                      
 m copyreg                   
-m cx_Freeze__init__         C:\Python33\lib\site-packages\cx_Freeze\initscripts\Console3.py
+m cx_Freeze__init__         C:\Python33\lib\site-packages\cx_Freeze\initscripts\Console.py
 m datetime                  
 P distutils                 C:\Python33\lib\distutils\__init__.py
 m distutils.errors          C:\Python33\lib\distutils\errors.py
@@ -221,10 +220,12 @@ P html                      C:\Python33\lib\html\__init__.py
 P http                      C:\Python33\lib\http\__init__.py
 m http.client               C:\Python33\lib\http\client.py
 m http.server               C:\Python33\lib\http\server.py
-m imp                       
-P importlib                 
+m imp                       C:\Python33\lib\imp.py
+P importlib                 C:\Python33\lib\importlib\__init__.py
+P importlib                 C:\Python33\lib\importlib\__init__.py
 m importlib._bootstrap      
-m importlib.machinery       
+m importlib._bootstrap      C:\Python33\lib\importlib\_bootstrap.py
+m importlib.machinery       C:\Python33\lib\importlib\machinery.py
 m io                        
 m itertools                 
 m keyword                   
