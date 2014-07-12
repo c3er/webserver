@@ -11,7 +11,7 @@ DEFAULT_PORT = 3030
 # HTTP related #################################################################
 class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     '''A cludge to accomplish an easy way to serve another directory than the
-    current.
+    current one.
     '''
     root_path = ''
     
