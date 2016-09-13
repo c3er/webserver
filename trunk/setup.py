@@ -9,5 +9,5 @@ setup(
     version = "1.0",
     description = "Very simple web server program.",
     options = {"build_exe": {"includes": ['re', 'traceback']}},
-    executables = [Executable("webserver.py", base = base)]
+    executables = [Executable("webserver.py", base=base)]
 )
