@@ -18,19 +18,20 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     current one.
     """
     root_path = ''
-    
+
     def __init__(self, *args, **kw):
         self.__path = ''
         super().__init__(*args, **kw)
-    
+
     def _get_path(self):
         path, file = os.path.split(self.__path)
         fullpath = os.path.join(path, self.root_path, file).replace('\\', '/')
+        print(fullpath)
         return fullpath
-    
+
     def _set_path(self, val):
         self.__path = val
-        
+
     path = property(_get_path, _set_path)
 
 
@@ -39,13 +40,13 @@ class HTTPServerWorker(threading.Thread):
         super().__init__()
         HTTPRequestHandler.root_path = root_path
         self.httpd = http.server.HTTPServer(("", port), HTTPRequestHandler)
-        
+
     def run(self):
         self.httpd.serve_forever()
-    
+
     def shutdown(self):
         self.httpd.shutdown()
-        
+
 ################################################################################
 
 
@@ -84,42 +85,40 @@ def main():
     parser, options = parse_args()
     if get_option_count(options) == 0:
         parser.print_help()
-    
+
     if options.port:
+        portstr = options.port
         try:
-            port = int(options.port)
+            port = int(portstr)
         except ValueError as exc:
-            port = options.port
-            parser.error('Could not identify "{}" as port.'.format(port))
+            parser.error(f'Could not identify "{portstr}" as port.')
     else:
         port = DEFAULT_PORT
-            
+
     if options.root_path:
         root_path = options.root_path
         if not os.path.isdir(root_path):
-            parser.error('Given path "{}" does not lead to a directory.'.format(
-                root_path
-            ))
+            parser.error(f'Given path "{root_path}" does not lead to a directory.')
         if len(root_path) > 0 and not root_path.endswith('/'):
             root_path += '/'
     else:
         root_path = ''
     ############################################################################
-    
+
     httpd = HTTPServerWorker(port, root_path)
-    
+
     print(
-        'Serving at port {} with root path "{}"'.format(port, root_path),
-        'http://localhost:{}/'.format(port),
+        f'Serving at port {port} with root path "{root_path}"',
+        f'http://localhost:{port}/',
         'Press Enter to exit.',
         sep='\n'
     )
     httpd.start()
-    
+
     input()
     print('Exiting')
     httpd.shutdown()
-    
-    
+
+
 if __name__ == '__main__':
     main()
