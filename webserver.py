@@ -81,43 +81,47 @@ def parse_args():
 
 
 def main():
-    # Evaluate given options ###################################################
-    parser, options = parse_args()
-    if get_option_count(options) == 0:
-        parser.print_help()
+    try:
+        # Evaluate given options ###############################################
+        parser, options = parse_args()
+        if get_option_count(options) == 0:
+            parser.print_help()
 
-    if options.port:
-        portstr = options.port
-        try:
-            port = int(portstr)
-        except ValueError as exc:
-            parser.error(f'Could not identify "{portstr}" as port.')
-    else:
-        port = DEFAULT_PORT
+        if options.port:
+            portstr = options.port
+            try:
+                port = int(portstr)
+            except ValueError as exc:
+                parser.error(f'Could not identify "{portstr}" as port.')
+        else:
+            port = DEFAULT_PORT
 
-    if options.root_path:
-        root_path = options.root_path
-        if not os.path.isdir(root_path):
-            parser.error(f'Given path "{root_path}" does not lead to a directory.')
-        if len(root_path) > 0 and not root_path.endswith('/'):
-            root_path += '/'
-    else:
-        root_path = ''
-    ############################################################################
+        if options.root_path:
+            root_path = options.root_path
+            if not os.path.isdir(root_path):
+                parser.error(f'Given path "{root_path}" does not lead to a directory.')
+            if len(root_path) > 0 and not root_path.endswith('/'):
+                root_path += '/'
+        else:
+            root_path = ''
+        ########################################################################
 
-    httpd = HTTPServerWorker(port, root_path)
+        httpd = HTTPServerWorker(port, root_path)
 
-    print(
-        f'Serving at port {port} with root path "{root_path}"',
-        f'http://localhost:{port}/',
-        'Press Enter to exit.',
-        sep='\n'
-    )
-    httpd.start()
+        print(
+            f'Serving at port {port} with root path "{root_path}"',
+            f'http://localhost:{port}/',
+            'Press Enter to exit.',
+            sep='\n'
+        )
+        httpd.start()
 
-    input()
-    print('Exiting')
-    httpd.shutdown()
+        input()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        print('Shutting down...')
+        httpd.shutdown()
 
 
 if __name__ == '__main__':
