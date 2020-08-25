@@ -24,10 +24,7 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         super().__init__(*args, **kw)
 
     def _get_path(self):
-        path, file = os.path.split(self.__path)
-        fullpath = os.path.join(path, self.root_path, file).replace('\\', '/')
-        print(fullpath)
-        return fullpath
+        return os.path.join(self.root_path, self.__path.strip("\\/")).replace('\\', '/')
 
     def _set_path(self, val):
         self.__path = val
