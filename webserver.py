@@ -23,13 +23,13 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.__path = ''
         super().__init__(*args, **kw)
 
-    def _get_path(self):
+    @property
+    def path(self):
         return os.path.join(self.root_path, self.__path.strip("\\/")).replace('\\', '/')
 
-    def _set_path(self, val):
+    @path.setter
+    def path(self, val):
         self.__path = val
-
-    path = property(_get_path, _set_path)
 
 
 class HTTPServerWorker(threading.Thread):
